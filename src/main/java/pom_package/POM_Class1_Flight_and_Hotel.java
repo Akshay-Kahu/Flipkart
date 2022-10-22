@@ -5,13 +5,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-
 public class POM_Class1_Flight_and_Hotel {
-
 
 	public POM_Class1_Flight_and_Hotel(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
+
+	@FindBy(xpath = "(//div[@class='eFQ30H'])[9]")
+	private WebElement CliCk_Flight;
 
 	@FindBy(xpath = "(//input[@type='text'])[1]")
 	private WebElement Source;
@@ -61,10 +62,16 @@ public class POM_Class1_Flight_and_Hotel {
 	public void Click_Search() {
 		Search.click();
 	}
+
 	public void Clear_Dest() {
-		Destination.clear();	
+		Destination.clear();
 	}
+
 	public void Clear_Source() {
-		Source.clear();	
+		Source.clear();
+	}
+	public void Cl_Flight() {
+		CliCk_Flight.click();
 	}
 }
+
