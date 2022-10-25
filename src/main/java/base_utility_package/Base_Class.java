@@ -1,13 +1,10 @@
 package base_utility_package;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Iterator;
 import java.util.Properties;
 import java.util.Set;
-
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,12 +14,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
+import pom_package.POM_Flight_and_Hotel;
+import pom_package.POM_Grocery;
 import pom_package.TOP_Offer;
 
 public class Base_Class {
 	public static WebDriver driver;
 	public static Utility_Class utility_class;
 	public static TOP_Offer top_offer;
+	public static POM_Grocery grocery;
+	public static POM_Flight_and_Hotel flights;
 	public static Properties property;
 	public static FileInputStream file;
 	public static WebDriverWait dynamic_wait;
@@ -63,7 +64,9 @@ public class Base_Class {
 	public static void Initialization() {
 		utility_class = new Utility_Class(driver);
 		top_offer = new TOP_Offer(driver);
-		dynamic_wait = new WebDriverWait(driver, 30);
+		dynamic_wait = new WebDriverWait(driver,10);
+		grocery = new POM_Grocery(driver);
+		flights = new POM_Flight_and_Hotel(driver);
 	}
 
 	public static void Refresh_Browser() {
@@ -129,7 +132,7 @@ public class Base_Class {
 	}
 	
 	public static void Explicite_wait(WebElement web_element) {
-		WebDriverWait dynamic_wait = new WebDriverWait(driver,30);
+		WebDriverWait dynamic_wait = new WebDriverWait(driver,10);
 		dynamic_wait.until(ExpectedConditions.visibilityOf(web_element));
 		
 	}

@@ -3,6 +3,9 @@ package base_utility_package;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.apache.poi.EncryptedDocumentException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -22,7 +25,8 @@ public class Utility_Class {
 	}
 
 	public String Get_Excel_Data(int row_index, int cell_index) throws EncryptedDocumentException, IOException {
-		FileInputStream file = new FileInputStream(System.getProperty("user.dir" + "/Maven_FlipKart_Validation/src/test/resources/TC_Data.xlsx"));
+		FileInputStream file = new FileInputStream(
+				"C:\\Users\\aksha\\OneDrive\\Desktop\\Test Data\\Excel Sheet\\TC_Data.xlsx");
 		Sheet sheet = WorkbookFactory.create(file).getSheet("Flipkart");
 		Cell cell = sheet.getRow(row_index).getCell(cell_index);
 		try {
@@ -33,9 +37,11 @@ public class Utility_Class {
 
 	}
 
-	public void Take_Screen_shot() {
+	public void Take_Screen_shot(String TC_name) {
+		Date date = new Date();
+		String DF = new SimpleDateFormat("ss_mm_hh_dd_MM_yyyy").format(date);
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File dest = new File(System.getProperty("user.dir" + "Maven_FlipKart_Validation\\ScreenShot_Proof"));
+		File dest = new File("C:\\Users\\aksha\\OneDrive\\Desktop\\Test Data\\ScreenShot\\" + DF + TC_name + ".png");
 		try {
 			FileHandler.copy(src, dest);
 		} catch (IOException e) {

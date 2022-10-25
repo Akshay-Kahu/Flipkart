@@ -16,7 +16,7 @@ public class Validate_Flights extends Base_Class{
 	public void Initial_Activity() throws InterruptedException, IOException {
 		Launch_Browser(Get_Property_Text("Browser"));
 		Static_Wait(2);
-		Initialization1();
+		Initialization();
 		}
 	@BeforeMethod
 	public void Enter_URL() throws InterruptedException {

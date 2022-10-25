@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import org.openqa.selenium.By;
 import org.testng.Assert;
-import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -33,21 +32,21 @@ public class Validate_Grocery extends Base_Class {
 	@Test(priority=0)
 	public void Grocery_validation() throws IOException {
 		//Actual = Grocery Prices In India();
-	 String actual = Grocery.Flipkart_Grocery_text();
+	 String actual = grocery.Flipkart_Grocery_text();
 	 String expected = Get_Property_Text("test14");
 	 Assert.assertEquals(actual, expected);
 	}
    @Test(priority=2)
     public void product_1() throws IOException {
 	 //  Grocery.Grocery_product_1()
-	   String actual = Grocery.Grocery_product_1();
+	   String actual = grocery.Grocery_product_1();
 	   String expected = Get_Property_Text("test15");
 	   Assert.assertEquals(actual, expected);
    }
    @Test(priority=3)
    public void product_2() throws IOException {
 		 
-		   String actual = Grocery.Grocery_product_2();
+		   String actual = grocery.Grocery_product_2();
 		   String expected = Get_Property_Text("test16");
 		   Assert.assertEquals(actual, expected);
 		   
@@ -55,7 +54,7 @@ public class Validate_Grocery extends Base_Class {
    @Test(priority=4)
    public void product_3() throws IOException {
 		 
-		   String actual = Grocery.Grocery_product_3();
+		   String actual = grocery.Grocery_product_3();
 		   String expected = Get_Property_Text("test17");
 		   Assert.assertEquals(actual, expected);
 		   
@@ -63,7 +62,7 @@ public class Validate_Grocery extends Base_Class {
    @Test(priority=5)
    public void product_4() throws IOException {
 		 
-		   String actual = Grocery.Grocery_product_4();
+		   String actual = grocery.Grocery_product_4();
 		   String expected = Get_Property_Text("test18");
 		   Assert.assertEquals(actual, expected);
 		   
@@ -71,7 +70,7 @@ public class Validate_Grocery extends Base_Class {
    @Test(priority=6)
    public void product_5() throws IOException {
 		
-		   String actual = Grocery.Grocery_product_5();
+		   String actual = grocery.Grocery_product_5();
 		   String expected = Get_Property_Text("test19");
 		   Assert.assertEquals(actual, expected);
 		   
@@ -79,7 +78,7 @@ public class Validate_Grocery extends Base_Class {
    @Test(priority=7)
    public void product_6() throws IOException {
 		
-		   String actual = Grocery.Grocery_product_6();
+		   String actual = grocery.Grocery_product_6();
 		   String expected = Get_Property_Text("test20");
 		   Assert.assertEquals(actual, expected);
 		   
@@ -87,7 +86,7 @@ public class Validate_Grocery extends Base_Class {
    @Test(priority=8)
    public void product_7() throws IOException {
 		 
-		   String actual = Grocery.Grocery_product_7();
+		   String actual = grocery.Grocery_product_7();
 		   String expected = Get_Property_Text("test21");
 		   Assert.assertEquals(actual, expected);
 		   
@@ -95,7 +94,7 @@ public class Validate_Grocery extends Base_Class {
    @Test(priority=9)
    public void product_8() throws IOException {
 		 
-		   String actual = Grocery.Grocery_product_8();
+		   String actual = grocery.Grocery_product_8();
 		   String expected = Get_Property_Text("test22");
 		   Assert.assertEquals(actual, expected);
 		   
@@ -103,7 +102,7 @@ public class Validate_Grocery extends Base_Class {
    @Test(priority=10)
    public void product_9() throws IOException {
 		
-		   String actual = Grocery.Grocery_product_9();
+		   String actual = grocery.Grocery_product_9();
 		   String expected = Get_Property_Text("test23");
 		   Assert.assertEquals(actual, expected);
 		   
@@ -111,7 +110,7 @@ public class Validate_Grocery extends Base_Class {
    @Test(priority=11)
    public void product_10() throws IOException {
 		 
-		   String actual = Grocery.Grocery_product_10();
+		   String actual = grocery.Grocery_product_10();
 		   String expected = Get_Property_Text("test24");
 		   Assert.assertEquals(actual, expected);
 		   
@@ -119,7 +118,7 @@ public class Validate_Grocery extends Base_Class {
    @Test(priority=1)
    public void product_() throws IOException {
 		 
-	   String actual = Grocery.Flipkart_Grocery_text();
+	   String actual = grocery.Flipkart_Grocery_text();
 	   String expected = Get_Property_Text("test25");
 	   Assert.assertEquals(actual, expected);
    }

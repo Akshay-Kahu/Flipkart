@@ -17,7 +17,7 @@ public class Listener_class implements ITestListener {
 		public void onTestSuccess (ITestResult result) {
 			Reporter.log("Test Case Passed - "+result.getName(),true);
 			try {
-				Base_Class.utility_class.Take_Screen_shot();
+				Base_Class.utility_class.Take_Screen_shot(result.getTestName());
 			} catch (Exception e) {
 				Reporter.log("No Name Screenshot ",true);
 			}
